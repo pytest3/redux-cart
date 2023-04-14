@@ -1,6 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
-import { decrementQuantity, incrementQuantity } from "../Store/cart-slice";
+import {
+  decrementQuantity,
+  incrementQuantity,
+  removeFromCart,
+} from "../Store/cart-slice";
 
 export default function Cart() {
   const dispatch = useDispatch();
@@ -16,6 +20,7 @@ export default function Cart() {
             <div>${i.quantity * i.price}</div>
             <button onClick={() => dispatch(decrementQuantity(i))}>-</button>
             <button onClick={() => dispatch(incrementQuantity(i))}>+</button>
+            <button onClick={() => dispatch(removeFromCart(i))}>x</button>
           </li>
         ))}
       </CartItems>
