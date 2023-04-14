@@ -1,7 +1,7 @@
 const CART_DATA = [
   {
     id: 0,
-    title: "Test Item 2",
+    title: "Test Item 1",
     description: "Awesome stuff",
     price: 21,
     quantity: 0,
