@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import SuperHeader from "./UI/SuperHeader";
 import { showNotification } from "./Store/ui-slice";
 import { refreshCart } from "./Store/cart-slice";
+import Login from "./Components/Login";
 
 // let initialRun = true;
 const URL =
@@ -116,6 +117,7 @@ function App() {
     <>
       <SuperHeader></SuperHeader>
       <Header></Header>
+      <Login />
       {showCart && <Cart></Cart>}
       <Products></Products>
     </>
